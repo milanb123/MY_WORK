@@ -1,0 +1,135 @@
+<!-- HTML structure for the car retail store project -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Retail Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    header {
+      background-color: #0073e6;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    .store {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .car-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .car-item:last-child {
+      border-bottom: none;
+    }
+
+    .buy-button {
+      background-color: #0073e6;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+
+    .buy-button:hover {
+      background-color: #005bb5;
+    }
+
+    .summary {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to the Car Retail Store</h1>
+  </header>
+  <div class="store" id="store"></div>
+  <div class="summary" id="summary"></div>
+
+  <script>
+    // Sample data for the car inventory
+    const cars = [
+      { id: 1, name: 'Tesla Model S', price: 79999 },
+      { id: 2, name: 'Ford Mustang', price: 55999 },
+      { id: 3, name: 'Chevrolet Camaro', price: 42999 },
+      { id: 4, name: 'BMW 3 Series', price: 49999 },
+    ];
+
+    let cart = [];
+
+    // Function to display the car inventory
+    function displayStore() {
+      const storeContainer = document.getElementById('store');
+      storeContainer.innerHTML = '';
+
+      cars.forEach(car => {
+        const carItem = document.createElement('div');
+        carItem.className = 'car-item';
+        carItem.innerHTML = `
+          <span>${car.name} - $${car.price.toLocaleString()}</span>
+          <button class="buy-button" onclick="addToCart(${car.id})">Buy</button>
+        `;
+        storeContainer.appendChild(carItem);
+      });
+    }
+
+    // Function to add a car to the cart
+    function addToCart(carId) {
+      const car = cars.find(c => c.id === carId);
+      if (car) {
+        cart.push(car);
+        updateSummary();
+        alert(`${car.name} has been added to your cart.`);
+      }
+    }
+
+    // Function to display the cart summary
+    function updateSummary() {
+      const summaryContainer = document.getElementById('summary');
+      if (cart.length === 0) {
+        summaryContainer.innerHTML = '<p>Your cart is empty.</p>';
+        return;
+      }
+
+      let total = 0;
+      summaryContainer.innerHTML = '<h3>Cart Summary:</h3>';
+      cart.forEach(car => {
+        total += car.price;
+        summaryContainer.innerHTML += `<p>${car.name} - $${car.price.toLocaleString()}</p>`;
+      });
+
+      summaryContainer.innerHTML += `<p><strong>Total: $${total.toLocaleString()}</strong></p>`;
+    }
+
+    // Display the store on page load
+    displayStore();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,230 @@
+/* ======= our facility ==== */
+.ourFacility {
+    background-color: aliceblue;
+}
+
+.ourFacility .our-p {
+    padding: 100px 0px;
+}
+
+.ourFacility .facilityDetails {
+    display: flex;
+    gap: 40px;
+}
+
+.ourFacility .facilityDetails .studyDetails {
+    flex: 1;
+}
+
+.ourFacility .facilityDetails .studyDetails h5 {
+    font-size: 17px;
+    text-transform: uppercase;
+    color: gray;
+}
+
+.ourFacility .facilityDetails .studyDetails h1 {
+    font-size: 40px;
+    padding: 10px 0px;
+    text-transform: capitalize;
+    color: #0d0d51;
+}
+
+.ourFacility .facilityDetails .studyDetails p {
+    color: gray;
+    font-size: 17px;
+    letter-spacing: 0.5px;
+    padding-bottom: 20px;
+}
+
+.ourFacility .facilityDetails .studyDetails .btn1 {
+    height: 50px;
+    width: 150px;
+    background: #f22e48;
+    border: 1px solid transparent;
+    border-radius: 40px;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    transition: 1s all ease;
+}
+
+.ourFacility .facilityDetails .studyDetails .btn1:hover {
+    background-color: #ec2668;
+}
+
+.ourFacility .facilityDetails .studyGrid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.ourFacility .facilityDetails .studyGrid .gridbox {
+    height: auto;
+    width: fit-content;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.ourFacility .facilityDetails .studyGrid .gridbox:hover {
+    box-shadow: 0px 3px 9px 0px #ece6e6;
+}
+
+.ourFacility .facilityDetails .studyGrid .gridbox span {
+    font-size: 25px;
+    color: #f22e48;
+}
+
+.ourFacility .facilityDetails .studyGrid .gridbox h3 {
+    font-size: 25px;
+    padding: 10px 0px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.ourFacility .facilityDetails .studyGrid .gridbox a {
+    color: #0d0d51;
+}
+
+.ourFacility .facilityDetails .studyGrid .gridbox a:hover {
+    color: #f22e48;
+}
+
+/* =========== news section ============= */
+.News-Sec .news-p {
+    padding: 50px 0px;
+}
+
+.News-Sec .news_title {
+    text-align: center;
+}
+
+.News-Sec .news_title h6 {
+    font-size: 17px;
+    text-transform: uppercase;
+    color: gray;
+    padding-bottom: 10px;
+}
+
+.News-Sec .news_title h1 {
+    font-size: 40px;
+    text-transform: capitalize;
+    color: #0d0d51;
+}
+
+.News-Sec .newsDetails {
+    display: flex;
+    gap: 30px
+}
+
+.News-Sec .newsDetails .leftNews {
+    flex: 1;
+}
+
+.News-Sec .newsDetails .leftNews .banner1 {
+    background-image: url(../images/banner1.jpg);
+    height: 600px;
+    max-width: 100%;
+    background-position: left;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+    display: grid;
+    align-content: flex-end;
+    transition: 0.6s all ease;
+}
+
+.News-Sec .newsDetails .leftNews .banner1::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.532);
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.News-Sec .newsDetails h2 a {
+    color: white;
+}
+
+.News-Sec .newsDetails .userD {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 10px 0px;
+    color: whitesmoke;
+}
+
+.News-Sec .newsDetails .userD a {
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.News-Sec .newsDetails .userD img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.News-Sec .newsDetails .rightNews {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.News-Sec .newsDetails .rightNews .banner2 {
+    background-image: url(../images/banner2.jpg);
+    height: 290px;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    padding: 20px;
+    display: grid;
+    align-content: flex-end;
+    transition: 0.6s all ease;
+}
+
+.News-Sec .newsDetails .rightNews .banner3 {
+    background-image: url(../images/banner3.jpg);
+    height: 290px;
+    background-position: center;
+    background-size: 100% 100%;
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    padding: 20px;
+    display: grid;
+    /* align-content: flex-end; */
+    transition: 0.6s all ease;
+}
+
+.News-Sec .newsDetails .rightNews .banner2::after,
+.banner3::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    width: 100%;
+    background-color: rgba(233, 0, 0, 0.532);
+    z-index: 11;
+    border-radius: 10px;
+}
+
+.News-Sec .newsDetails .banner1:hover,
+.banner2:hover,
+.banner3:hover {
+    transform: translateY(-10px);
+}
