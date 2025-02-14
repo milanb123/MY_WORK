@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": "2c05",
+      "name": "Milan Bhesaniya",
+      "email": "bhesaniyamilan@gmail.com",
+      "password": "A123456"
+    },
+    {
+      "id": "a1a2",
+      "name": "Milan Patel",
+      "email": "bhesaniyamilu@gmail.com",
+      "password": "M@001258"
+    },
+    {
+      "id": "ad79",
+      "name": "Dhvilan",
+      "email": "dhvilan1234@gmail.com",
+      "password": "Dhvilan@0013"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Laptop",
+      "price": 10000,
+      "image": "https://techterms.com/img/xl/laptop_586.png",
+      "userid": "2c05"
+    },
+    {
+      "id": "2",
+      "name": "Mobile",
+      "price": 5000,
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlL4mif5-xwOFU2zkx_6IjTMdtMOVNJzKZtA&s"
+    },
+    {
+      "id": "3",
+      "name": "Headphones",
+      "price": 3000,
+      "image": "https://shop.zebronics.com/cdn/shop/files/Zeb-Thunderpro-blue-pic-1.jpg?v=1709202990&width=1200",
+      "userid": "a1a2"
+    }
+  ]
+
+  
+}

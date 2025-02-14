@@ -1,0 +1,43 @@
+.register-container {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  color: white;
+}
+.register-container h2 {
+  font-weight: bold;
+}
+.form-control {
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  color: white;
+}
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+.btn-custom {
+  background: white;
+  color: #ff4b2b;
+  font-weight: bold;
+  border-radius: 20px;
+  padding: 10px;
+  width: 100%;
+}
+.btn-custom:hover {
+  background: #ff416c;
+  color: white;
+}
+.link-custom {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+.link-custom:hover {
+  text-decoration: underline;
+}
