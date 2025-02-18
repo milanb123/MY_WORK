@@ -1,0 +1,29 @@
+/* Custom styles for the gallery */
+.gallery-item {
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.gallery-item:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* Lightbox Image */
+.modal-img {
+  max-height: 80vh;
+  object-fit: contain;
+}
